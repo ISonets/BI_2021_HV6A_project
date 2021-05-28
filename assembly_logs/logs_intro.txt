@@ -1,0 +1,1 @@
+Here you find logs for different genome assembly trials that were done during this project.

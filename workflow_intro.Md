@@ -10,7 +10,7 @@ Sequencedmaterial was taken from spermatozoids.
 For more info about DNA isolation, library preparation and sequencing parameters please contact Olga Goleva, PhD(golev.ao@mail.ru) 
 
 HARDWARE:
-Cluster of our lab: 3 Tb availbale space, 32 CPU, 160Gb of RAM
+Cluster of our lab: 3 Tb availbale space, 32 CPU, 160Gb of RAM, Ubuntu 18.04 LTS, access via SSH, no root access.
 
 # 1. TOOLS used in this study:
 

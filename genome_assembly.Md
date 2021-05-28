@@ -148,6 +148,7 @@ minia -in reads_1_MGI.fq,reads_2_MGI.fq -out minia_asm.fa
 Minia showed the best resulting assembly across all draft assemblies. But it is only partial success. After some consulting , I decided to adopt custom pipeline.
 
 # 7. Custom pipeline
+Fig.1 illustates custom pipeline prosed for task completion.![Fig.1. Pipeline proposal](/custom_pipeline_proposal.png)
    - first assemble Nanopore reads using Flye (done previosly);
    - polish them with Minimap2 and Racon (we are here at 21/05/21);
    - align MGI reads to the draft assembly with BWA and polish gaps with Pilon;

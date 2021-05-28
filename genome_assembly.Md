@@ -156,13 +156,13 @@ Unfortunately, Racon polisher refused to work as intended, and I have no idea wh
 
 # 8. Taxonomic analysis.
 Maybe my reads are totally contaminated, and I can't produce good alignments and therefore good contigs and scaffolds? I decided to use Kaiju to verify taxonomic content.
-Tool was installed via conda. As a reference database RefSeq Genomes database were used and downloaded.
-(insert results here)
+Tool was installed via conda. As a reference database RefSeq Genomes database were used and downloaded. To put in simple, there are some contamination, most of them are viral and bacterial, bus some fungi also occur in raw data. Unfortunately, I ran out of time and don't check all reads, but I assume that because all data are taken from 1 person and processed simultaneously, results would be relevant. See Fig.2 (Nanopore data taxonomic profile), Table 1 (taxonomic profile summary for Nanopore reads), Fig.3 (MGI data taxonomic profile) and Table 2 (taxonomic profile summary for MGI reads) for more details. In future I plan to filter out bacterial reads and preserve viral reads,since we seacrhing for viral genome.
 
 # 9. Future plans and things to discuss:
 
 - Nanopore resequencing?
 - moving to new cluster with more powerful hardware?
+- filter out bacterial contamination?
 - more consulting?
 
 If you have any advices/tips and hints/recommendations and even critique, feel free to email me (ignatsonets@gmail.com).

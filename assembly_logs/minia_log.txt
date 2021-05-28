@@ -1,0 +1,239 @@
+minia -in reads_1_MGI.fq,reads_2_MGI.fq -out minia_asm.fa
+setting storage type to hdf5
+[Approximating frequencies of minimizers ]  100  %   elapsed:   0 min 15 sec   remaining:   0 min 0  sec   cpu:  99.9 %   mem: [  29,   29,   29] MB 
+[DSK: nb solid kmers: 2306677476         ]  101  %   elapsed:   5 min 38 sec   remaining:   0 min 0  sec   cpu: 1274.5 %   mem: [2468, 7435, 7459] MB 
+bcalm_algo params, prefix:minia_asm.fa.unitigs.fa k:31 a:2 minsize:10 threads:32 mintype:1
+DSK used 1 passes and 491 partitions
+prior to queues allocation                      22:40:15     memory [current, maxRSS]: [2464, 7459] MB 
+Starting BCALM2                                 22:40:15     memory [current, maxRSS]: [2464, 7459] MB 
+[Iterating DSK partitions                ]  99.4 %   elapsed:  10 min 14 sec   remaining:   0 min 4  sec
+Number of sequences in glue: 393607279
+Number of pre-tips removed : 0
+Buckets compaction and gluing           : 613.8 secs
+Within that, 
+                                 creating buckets from superbuckets: 332.0 secs
+                      bucket compaction (wall-clock during threads): 281.2 secs
+
+                within all bucket compaction threads,
+                       adding nodes to subgraphs: 2361.7 secs
+         subgraphs constructions and compactions: 3847.7 secs
+                  compacted nodes redistribution: 2240.4 secs
+Sum of CPU times for bucket compactions: 8781.9 secs
+BCALM total wallclock (excl kmer counting): 613.9 secs
+Maximum number of kmers in a subgraph: 81750
+Performance of compaction step:
+
+                 Wallclock time spent in parallel section : 281.2 secs
+             Best theoretical speedup in parallel section : 238.7x
+Best theor. speedup in parallel section using 1 threads : 1.0x
+             Sum of longest bucket compaction for each sb : 40.0 secs
+                       Sum of best scheduling for each sb : 8450.6 secs
+Done with all compactions                       22:50:31     memory [current, maxRSS]: [3524, 7459] MB 
+bglue_algo params, prefix:minia_asm.fa.unitigs.fa k:31 threads:32
+Starting bglue with 32 threads                  22:50:31     memory [current, maxRSS]: [3201, 7459] MB 
+number of sequences to be glued: 393607279        22:50:31     memory [current, maxRSS]: [3201, 7459] MB 
+229194636 marked kmers, 99683996 unmarked kmers        22:53:49     memory [current, maxRSS]: [4983, 7459] MB 
+created vector of hashes, size approx 1748 MB)        22:53:49     memory [current, maxRSS]: [4983, 7459] MB 
+pass 1/3, 114597318 unique hashes written to disk, size 874 MB        22:54:05     memory [current, maxRSS]: [3234, 7459] MB 
+229157970 marked kmers, 99683996 unmarked kmers        22:57:22     memory [current, maxRSS]: [4999, 7459] MB 
+created vector of hashes, size approx 1748 MB)        22:57:22     memory [current, maxRSS]: [4999, 7459] MB 
+pass 2/3, 114578985 unique hashes written to disk, size 874 MB        22:57:38     memory [current, maxRSS]: [3250, 7459] MB 
+229177956 marked kmers, 99683996 unmarked kmers        23:00:47     memory [current, maxRSS]: [4999, 7459] MB 
+created vector of hashes, size approx 1748 MB)        23:00:47     memory [current, maxRSS]: [4999, 7459] MB 
+pass 3/3, 114588978 unique hashes written to disk, size 874 MB        23:01:03     memory [current, maxRSS]: [3250, 7459] MB 
+loaded all unique UF elements (343765281) into a single vector of size 2622 MB        23:01:05     memory [current, maxRSS]: [5873, 7459] MB 
+[Building BooPHF]  100  %   elapsed:   0 min 15 sec   remaining:   0 min 0  sec
+Bitarray      1619205952  bits (100.00 %)   (array + ranks )
+final hash             0  bits (0.00 %) (nb in final hash 0)
+UF MPHF constructed (193 MB)                    23:01:21     memory [current, maxRSS]: [3250, 7459] MB 
+UF constructed                                  23:03:35     memory [current, maxRSS]: [5873, 7459] MB 
+freed original UF (2622 MB)                     23:04:06     memory [current, maxRSS]: [3250, 7459] MB 
+loaded 32-bit UF (1311 MB)                      23:04:09     memory [current, maxRSS]: [3269, 7459] MB 
+Allowed 24 MB memory for buffers                23:04:09     memory [current, maxRSS]: [3269, 7459] MB 
+Disk partitioning of glue                       23:04:09     memory [current, maxRSS]: [3269, 7459] MB 
+Done disk partitioning of glue                  23:06:37     memory [current, maxRSS]: [3269, 7459] MB 
+Top 10 glue partitions by size:
+Glue partition 447 has 750759 sequences 
+Glue partition 495 has 749280 sequences 
+Glue partition 254 has 748988 sequences 
+Glue partition 256 has 746344 sequences 
+Glue partition 448 has 745548 sequences 
+Glue partition 113 has 745409 sequences 
+Glue partition 222 has 745347 sequences 
+Glue partition 487 has 745088 sequences 
+Glue partition 151 has 744794 sequences 
+Glue partition 242 has 744746 sequences 
+Glueing partitions                              23:06:37     memory [current, maxRSS]: [3269, 7459] MB 
+Gluing partition 0 (size: 40 MB)                23:06:37     memory [current, maxRSS]: [3269, 7459] MB 
+Gluing partition 20 (size: 40 MB)               23:06:37     memory [current, maxRSS]: [3269, 7459] MB 
+Gluing partition 40 (size: 40 MB)               23:06:50     memory [current, maxRSS]: [5705, 7459] MB 
+Gluing partition 60 (size: 39 MB)               23:06:51     memory [current, maxRSS]: [5705, 7459] MB 
+Gluing partition 80 (size: 40 MB)               23:07:03     memory [current, maxRSS]: [5828, 7459] MB 
+Gluing partition 100 (size: 39 MB)              23:07:12     memory [current, maxRSS]: [5835, 7459] MB 
+Gluing partition 120 (size: 39 MB)              23:07:15     memory [current, maxRSS]: [5835, 7459] MB 
+Gluing partition 140 (size: 40 MB)              23:07:26     memory [current, maxRSS]: [5851, 7459] MB 
+Gluing partition 160 (size: 40 MB)              23:07:35     memory [current, maxRSS]: [5891, 7459] MB 
+Gluing partition 180 (size: 40 MB)              23:07:39     memory [current, maxRSS]: [5847, 7459] MB 
+Gluing partition 200 (size: 39 MB)              23:07:49     memory [current, maxRSS]: [5870, 7459] MB 
+Gluing partition 220 (size: 39 MB)              23:07:51     memory [current, maxRSS]: [5870, 7459] MB 
+Gluing partition 240 (size: 40 MB)              23:08:02     memory [current, maxRSS]: [5871, 7459] MB 
+Gluing partition 260 (size: 40 MB)              23:08:12     memory [current, maxRSS]: [5964, 7459] MB 
+Gluing partition 280 (size: 39 MB)              23:08:15     memory [current, maxRSS]: [5898, 7459] MB 
+Gluing partition 300 (size: 40 MB)              23:08:26     memory [current, maxRSS]: [5910, 7459] MB 
+Gluing partition 320 (size: 40 MB)              23:08:35     memory [current, maxRSS]: [5877, 7459] MB 
+Gluing partition 340 (size: 39 MB)              23:08:39     memory [current, maxRSS]: [5877, 7459] MB 
+Gluing partition 360 (size: 39 MB)              23:08:48     memory [current, maxRSS]: [5922, 7459] MB 
+Gluing partition 380 (size: 39 MB)              23:08:52     memory [current, maxRSS]: [5877, 7459] MB 
+Gluing partition 400 (size: 40 MB)              23:09:02     memory [current, maxRSS]: [5914, 7459] MB 
+Gluing partition 420 (size: 39 MB)              23:09:12     memory [current, maxRSS]: [5924, 7459] MB 
+Gluing partition 440 (size: 40 MB)              23:09:15     memory [current, maxRSS]: [5941, 7459] MB 
+Gluing partition 460 (size: 39 MB)              23:09:24     memory [current, maxRSS]: [5902, 7459] MB 
+Gluing partition 480 (size: 40 MB)              23:09:36     memory [current, maxRSS]: [5974, 7459] MB 
+Gluing partition 500 (size: 40 MB)              23:09:39     memory [current, maxRSS]: [5945, 7459] MB 
+end                                             23:09:55     memory [current, maxRSS]: [3881, 7459] MB 
+Finding links between unitigs                   23:09:58     memory [current, maxRSS]: [3881, 7459] MB 
+step 1 pass 0                                   23:09:58     memory [current, maxRSS]: [3881, 7459] MB 
+step 2 (8633514kmers/18876850extremities)        23:10:35     memory [current, maxRSS]: [3881, 7459] MB 
+step 1 pass 1                                   23:11:29     memory [current, maxRSS]: [3881, 7459] MB 
+step 2 (8650355kmers/18769609extremities)        23:12:04     memory [current, maxRSS]: [3881, 7459] MB 
+step 1 pass 2                                   23:12:57     memory [current, maxRSS]: [3881, 7459] MB 
+step 2 (1628223kmers/3315720extremities)        23:13:20     memory [current, maxRSS]: [3881, 7459] MB 
+step 1 pass 3                                   23:13:46     memory [current, maxRSS]: [3881, 7459] MB 
+step 2 (5085512kmers/10985326extremities)        23:14:15     memory [current, maxRSS]: [3881, 7459] MB 
+step 1 pass 4                                   23:14:54     memory [current, maxRSS]: [3881, 7459] MB 
+step 2 (8013466kmers/17962916extremities)        23:15:29     memory [current, maxRSS]: [3881, 7459] MB 
+step 1 pass 5                                   23:16:20     memory [current, maxRSS]: [3881, 7459] MB 
+step 2 (8990687kmers/19998372extremities)        23:16:58     memory [current, maxRSS]: [3881, 7459] MB 
+step 1 pass 6                                   23:17:53     memory [current, maxRSS]: [3881, 7459] MB 
+step 2 (2068819kmers/4497629extremities)        23:18:17     memory [current, maxRSS]: [3881, 7459] MB 
+step 1 pass 7                                   23:18:45     memory [current, maxRSS]: [3881, 7459] MB 
+step 2 (2505680kmers/5279064extremities)        23:19:10     memory [current, maxRSS]: [3881, 7459] MB 
+gathering links from disk                       23:19:39     memory [current, maxRSS]: [3881, 7459] MB 
+Done finding links between unitigs              23:22:50     memory [current, maxRSS]: [3881, 7459] MB 
+loading unitigs from disk to memory
+Stats:
+Number of unitigs: 49842743
+Average number of incoming/outcoming neighbors: 0.9/0.9
+Total number of nucleotides in unitigs: 3801959766
+
+Memory usage:
+   488 MB keys in incoming vector
+   493 MB keys in outcoming vector
+   21 MB keys in dag_incoming_map vector
+   21 MB keys in dag_outcoming_map vector
+   987 MB packed unitigs (incl. 65 MB delimiters)
+   256 MB unitigs lengths
+   190 MB unitigs abundances
+   11 MB deleted/visited bitvectors
+Estimated total: 2470.1 MB
+[removing tips,    pass  1               ]  100  %   elapsed:   0 min 23 sec   remaining:   0 min 0  sec   cpu: 1481.9 %   mem: [6000, 6000, 7459] MB 
+[removing tips,    pass  2               ]  100  %   elapsed:   0 min 11 sec   remaining:   0 min 0  sec   cpu: 3089.4 %   mem: [6000, 6000, 7459] MB 
+[removing tips,    pass  3               ]  100  %   elapsed:   0 min 11 sec   remaining:   0 min 0  sec   cpu: 3129.5 %   mem: [6000, 6000, 7459] MB 
+[removing tips,    pass  4               ]  100  %   elapsed:   0 min 11 sec   remaining:   0 min 0  sec   cpu: 3141.4 %   mem: [6000, 6000, 7459] MB 
+[removing tips,    pass  5               ]  100  %   elapsed:   0 min 11 sec   remaining:   0 min 0  sec   cpu: 3126.4 %   mem: [6000, 6000, 7459] MB 
+[removing bulges,  pass  1               ]  100  %   elapsed:   2 min 9  sec   remaining:   0 min 0  sec   cpu: 3191.9 %   mem: [6004, 6004, 7459] MB 
+[removing bulges,  pass  2               ]  100  %   elapsed:   2 min 7  sec   remaining:   0 min 0  sec   cpu: 3193.5 %   mem: [6004, 6004, 7459] MB 
+[removing bulges,  pass  3               ]  100  %   elapsed:   2 min 6  sec   remaining:   0 min 0  sec   cpu: 3191.2 %   mem: [6004, 6004, 7459] MB 
+[removing bulges,  pass  4               ]  100  %   elapsed:   2 min 5  sec   remaining:   0 min 0  sec   cpu: 3190.7 %   mem: [6004, 6004, 7459] MB 
+[removing ec,      pass  1               ]  100  %   elapsed:   0 min 41 sec   remaining:   0 min 0  sec   cpu: 2475.3 %   mem: [6003, 6003, 7459] MB 
+[removing ec,      pass  2               ]  100  %   elapsed:   0 min 13 sec   remaining:   0 min 0  sec   cpu: 3018.5 %   mem: [6003, 6003, 7459] MB 
+[removing ec,      pass  3               ]  100  %   elapsed:   0 min 10 sec   remaining:   0 min 0  sec   cpu: 3117.3 %   mem: [6003, 6003, 7459] MB 
+[removing ec,      pass  4               ]  100  %   elapsed:   0 min 10 sec   remaining:   0 min 0  sec   cpu: 3130.2 %   mem: [6003, 6003, 7459] MB 
+[removing ec,      pass  5               ]  100  %   elapsed:   0 min 10 sec   remaining:   0 min 0  sec   cpu: 3148.2 %   mem: [6003, 6003, 7459] MB 
+[removing tips,    pass  6               ]  100  %   elapsed:   0 min 11 sec   remaining:   0 min 0  sec   cpu: 2725.6 %   mem: [6003, 6003, 7459] MB 
+[removing bulges,  pass  5               ]  100  %   elapsed:   0 min 21 sec   remaining:   0 min 0  sec   cpu: 3173.5 %   mem: [6006, 6006, 7459] MB 
+[removing ec,      pass  6               ]  100  %   elapsed:   0 min 9  sec   remaining:   0 min 0  sec   cpu: 3132.5 %   mem: [6003, 6003, 7459] MB 
+[removing tips,    pass  7               ]  100  %   elapsed:   0 min 10 sec   remaining:   0 min 0  sec   cpu: 3129.0 %   mem: [6003, 6003, 7459] MB 
+[removing bulges,  pass  6               ]  100  %   elapsed:   0 min 19 sec   remaining:   0 min 0  sec   cpu: 3172.8 %   mem: [6006, 6006, 7459] MB 
+[removing ec,      pass  7               ]  100  %   elapsed:   0 min 8  sec   remaining:   0 min 0  sec   cpu: 3118.2 %   mem: [6003, 6003, 7459] MB 
+[removing tips,    pass  8               ]  100  %   elapsed:   0 min 9  sec   remaining:   0 min 0  sec   cpu: 3145.0 %   mem: [6003, 6003, 7459] MB 
+[removing bulges,  pass  7               ]  100  %   elapsed:   0 min 19 sec   remaining:   0 min 0  sec   cpu: 3178.2 %   mem: [6006, 6006, 7459] MB 
+[removing ec,      pass  8               ]  100  %   elapsed:   0 min 8  sec   remaining:   0 min 0  sec   cpu: 3131.6 %   mem: [6003, 6003, 7459] MB 
+[removing tips,    pass  9               ]  100  %   elapsed:   0 min 9  sec   remaining:   0 min 0  sec   cpu: 3138.4 %   mem: [6003, 6003, 7459] MB 
+[removing bulges,  pass  8               ]  100  %   elapsed:   0 min 18 sec   remaining:   0 min 0  sec   cpu: 3167.7 %   mem: [6006, 6006, 7459] MB 
+[removing ec,      pass  9               ]  100  %   elapsed:   0 min 8  sec   remaining:   0 min 0  sec   cpu: 3128.3 %   mem: [6003, 6003, 7459] MB 
+[removing tips,    pass 10               ]  100  %   elapsed:   0 min 9  sec   remaining:   0 min 0  sec   cpu: 3142.2 %   mem: [6003, 6003, 7459] MB 
+[removing bulges,  pass  9               ]  100  %   elapsed:   0 min 18 sec   remaining:   0 min 0  sec   cpu: 3183.9 %   mem: [6006, 6006, 7459] MB 
+[removing ec,      pass 10               ]  100  %   elapsed:   0 min 8  sec   remaining:   0 min 0  sec   cpu: 3131.0 %   mem: [6003, 6003, 7459] MB 
+[removing tips,    pass 11               ]  100  %   elapsed:   0 min 9  sec   remaining:   0 min 0  sec   cpu: 3157.0 %   mem: [6003, 6003, 7459] MB 
+[removing bulges,  pass 10               ]  100  %   elapsed:   0 min 18 sec   remaining:   0 min 0  sec   cpu: 3177.0 %   mem: [6006, 6006, 7459] MB 
+[removing ec,      pass 11               ]  100  %   elapsed:   0 min 8  sec   remaining:   0 min 0  sec   cpu: 3129.7 %   mem: [6003, 6003, 7459] MB 
+[Minia : assembly                        ]  100  %   elapsed:   1 min 54 sec   remaining:   0 min 0  sec   cpu:  99.5 %   mem: [6003, 6003, 7459] MB 
+Finding links between unitigs                   23:42:15     memory [current, maxRSS]: [6003, 7459] MB 
+step 1 pass 0                                   23:42:15     memory [current, maxRSS]: [6003, 7459] MB 
+step 2 (2462259kmers/5341076extremities)        23:42:26     memory [current, maxRSS]: [6003, 7459] MB 
+step 1 pass 1                                   23:42:41     memory [current, maxRSS]: [6003, 7459] MB 
+step 2 (2310995kmers/4978037extremities)        23:42:51     memory [current, maxRSS]: [6003, 7459] MB 
+step 1 pass 2                                   23:43:06     memory [current, maxRSS]: [6003, 7459] MB 
+step 2 (482123kmers/963799extremities)          23:43:13     memory [current, maxRSS]: [6003, 7459] MB 
+step 1 pass 3                                   23:43:21     memory [current, maxRSS]: [6003, 7459] MB 
+step 2 (1357301kmers/2906421extremities)        23:43:30     memory [current, maxRSS]: [6003, 7459] MB 
+step 1 pass 4                                   23:43:41     memory [current, maxRSS]: [6003, 7459] MB 
+step 2 (2167584kmers/4824409extremities)        23:43:51     memory [current, maxRSS]: [6003, 7459] MB 
+step 1 pass 5                                   23:44:05     memory [current, maxRSS]: [6003, 7459] MB 
+step 2 (2279824kmers/5184492extremities)        23:44:16     memory [current, maxRSS]: [6003, 7459] MB 
+step 1 pass 6                                   23:44:30     memory [current, maxRSS]: [6003, 7459] MB 
+step 2 (582960kmers/1258684extremities)         23:44:38     memory [current, maxRSS]: [6003, 7459] MB 
+step 1 pass 7                                   23:44:46     memory [current, maxRSS]: [6003, 7459] MB 
+step 2 (600375kmers/1313082extremities)         23:44:54     memory [current, maxRSS]: [6003, 7459] MB 
+gathering links from disk                       23:45:03     memory [current, maxRSS]: [6003, 7459] MB 
+Done finding links between unitigs              23:45:56     memory [current, maxRSS]: [6003, 7459] MB 
+    -in                                      : reads_1_MGI.fq,reads_2_MGI.fq
+    -out                                     : minia_asm.fa
+    -traversal                               : contig
+    -fasta-line                              : 0
+    -tip-len-topo-kmult                      : 2.500000
+    -tip-len-rctc-kmult                      : 10.000000
+    -tip-rctc-cutoff                         : 2.000000
+    -bulge-len-kmult                         : 3.000000
+    -bulge-len-kadd                          : 100
+    -bulge-altpath-kadd                      : 50
+    -bulge-altpath-covmult                   : 1.100000
+    -ec-len-kmult                            : 9.000000
+    -ec-rctc-cutoff                          : 4.000000
+    -kmer-size                               : 31
+    -abundance-min                           : 2
+    -abundance-max                           : 2147483647
+    -abundance-min-threshold                 : 2
+    -histo-max                               : 10000
+    -solidity-kind                           : sum
+    -max-memory                              : 5000
+    -max-disk                                : 0
+    -out-dir                                 : .
+    -out-tmp                                 : .
+    -out-compress                            : 0
+    -storage-type                            : hdf5
+    -histo2D                                 : 0
+    -histo                                   : 0
+    -minimizer-type                          : 1
+    -minimizer-size                          : 10
+    -repartition-type                        : 1
+    -bloom                                   : neighbor
+    -debloom                                 : cascading
+    -debloom-impl                            : minimizer
+    -branching-nodes                         : stored
+    -topology-stats                          : 0
+    -nb-cores                                : 32
+    -edge-km                                 : 0
+    -verbose                                 : 1
+    -integer-precision                       : 0
+    -nb-glue-partitions                      : 0
+    -storage-type                            : 1
+    -verbose                                 : 1
+    -verbose                                 : 1
+    -verbose                                 : 1
+    stats                                   
+        traversal                                : contig
+        nb_solid_kmers                           : -1988289820
+        nb_contigs                               : 13385000
+        nb_small_contigs_discarded               : 5834408
+        nt_assembled                             : 2094047330
+        max_length                               : 9063
+        graph simpification stats               
+            tips removed                             : 6248185 + 504495 + 120229 + 21967 + 6711 + 1281571 + 408090 + 147158 + 54868 + 20540 + 7515
+            bulges removed                           : 794468 + 56090 + 12123 + 3446 + 16958 + 3889 + 1306 + 468 + 172 + 67
+            EC removed                               : 6388165 + 992657 + 171044 + 35062 + 7720 + 112118 + 88253 + 46070 + 21283 + 9229 + 3682
+        assembly traversal stats                
+    time                                     : 4078.621
+        assembly                                 : 1002.900
+        graph construction                       : 3075.721

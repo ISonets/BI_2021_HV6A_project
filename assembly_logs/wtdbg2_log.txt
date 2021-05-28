@@ -1,0 +1,121 @@
+wtdbg2 -i reads_all.fastq  -t 16 -x preset3 -g 3g -o assembly_HV6A
+--
+-- total memory      198045428.0 kB
+-- available         187353700.0 kB
+-- 32 cores
+-- Starting program: wtdbg2 -i reads_all.fastq -t 16 -x preset3 -g 3g -o assembly_HV6A
+-- pid                     10919
+-- date         Fri May 14 13:06:31 2021
+--
+[Fri May 14 13:06:31 2021] loading reads
+217017 reads
+[Fri May 14 13:07:19 2021] Done, 217017 reads (>=5000 bp), 4710313757 bp, 18291642 bins
+** PROC_STAT(0) **: real 48.397 sec, user 49.880 sec, sys 8.940 sec, maxrss 1569824.0 kB, maxvsize 1730032.0 kB
+[Fri May 14 13:07:19 2021] Set --edge-cov to 2
+KEY PARAMETERS: -k 0 -p 19 -K 1000.049988 -A -S 2.000000 -s 0.050000 -g 3000000000 -X 50.000000 -e 2 -L 5000
+[Fri May 14 13:07:19 2021] generating nodes, 16 threads
+[Fri May 14 13:07:19 2021] indexing bins[(0,18291642)/18291642] (4682660352/4682660352 bp), 16 threads
+[Fri May 14 13:07:19 2021] - scanning kmers (K0P19S2.00) from 18291642 bins
+18291642 bins
+********************** Kmer Frequency **********************
+|                                                                                                   
+|                                                                                                   
+|                                                                                                   
+|                                                                                                   
+|                                                                                                   
+|     |                                                                                             
+|    |||                                                                                            
+|   |||||                                                                                           
+|   ||||||                                                                                          
+|| |||||||                                                                                          
+|| ||||||||                                                                                         
+||||||||||||                                                                                        
+|||||||||||||                                                                                       
+||||||||||||||                                                                                      
+|||||||||||||||                                                                                     
+||||||||||||||||                                                                                    
+||||||||||||||||||                                                                                  
+||||||||||||||||||||                                                                                
+||||||||||||||||||||||||                                                                            
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+**********************     1 - 201    **********************
+Quatiles:
+   10%   20%   30%   40%   50%   60%   70%   80%   90%   95%
+     4     8    12    15    19    24    31    44    90   226
+** PROC_STAT(0) **: real 123.002 sec, user 818.920 sec, sys 25.280 sec, maxrss 5008156.0 kB, maxvsize 6436244.0 kB
+[Fri May 14 13:08:34 2021] - high frequency kmer depth is set to 1000
+[Fri May 14 13:08:34 2021] - Total kmers = 178686761
+[Fri May 14 13:08:34 2021] - average kmer depth = 11
+[Fri May 14 13:08:34 2021] - 60449629 low frequency kmers (<2)
+[Fri May 14 13:08:34 2021] - 12001 high frequency kmers (>1000)
+[Fri May 14 13:08:34 2021] - indexing 118225131 kmers, 1412861252 instances (at most)
+18291642 bins
+[Fri May 14 13:10:05 2021] - indexed  118225131 kmers, 1412711935 instances
+[Fri May 14 13:10:05 2021] - masked 4053 bins as closed
+[Fri May 14 13:10:05 2021] - sorting
+** PROC_STAT(0) **: real 223.051 sec, user 2231.740 sec, sys 69.300 sec, maxrss 12454788.0 kB, maxvsize 16679256.0 kB
+[Fri May 14 13:10:14 2021] Done
+217016 reads|total hits 999065
+** PROC_STAT(0) **: real 1367.587 sec, user 20359.240 sec, sys 435.500 sec, maxrss 12683272.0 kB, maxvsize 18262512.0 kB
+[Fri May 14 13:29:18 2021] sorting rdhits ... Done
+[Fri May 14 13:29:18 2021] clipping ... 71.98% bases
+[Fri May 14 13:29:19 2021] generating regs ... 9633319
+[Fri May 14 13:29:21 2021] sorting regs ...  Done
+[Fri May 14 13:29:22 2021] generating intervals ...  2569179 intervals
+[Fri May 14 13:29:22 2021] selecting important intervals from 2569179 intervals
+[Fri May 14 13:29:29 2021] Intervals: kept 799305, discarded 1769874
+** PROC_STAT(0) **: real 1378.100 sec, user 20379.530 sec, sys 444.460 sec, maxrss 12683272.0 kB, maxvsize 18262512.0 kB
+[Fri May 14 13:29:29 2021] Done, 799305 nodes
+[Fri May 14 13:29:29 2021] output "assembly_HV6A.1.nodes". Done.
+[Fri May 14 13:29:30 2021] median node depth = 2
+[Fri May 14 13:29:30 2021] masked 8 high coverage nodes (>200 or <2)
+[Fri May 14 13:29:31 2021] masked 11757 repeat-like nodes by local subgraph analysis
+[Fri May 14 13:29:31 2021] generating edges
+[Fri May 14 13:29:35 2021] Done, 3660536 edges
+[Fri May 14 13:29:35 2021] output "assembly_HV6A.1.reads". Done.
+[Fri May 14 13:29:36 2021] output "assembly_HV6A.1.dot.gz". Done.
+[Fri May 14 13:29:41 2021] graph clean
+[Fri May 14 13:29:41 2021] rescued 3903 low cov edges
+[Fri May 14 13:29:41 2021] deleted 292 binary edges
+[Fri May 14 13:29:41 2021] deleted 584581 isolated nodes
+[Fri May 14 13:29:42 2021] cut 9629 transitive edges
+[Fri May 14 13:29:42 2021] output "assembly_HV6A.2.dot.gz". Done.
+[Fri May 14 13:29:47 2021] 2621 bubbles; 3307 tips; 8 yarns; rescued 9300 high edges
+[Fri May 14 13:29:47 2021] deleted 10203 isolated nodes
+[Fri May 14 13:29:47 2021] output "assembly_HV6A.3.dot.gz". Done.
+[Fri May 14 13:29:48 2021] cut 107 branching nodes
+[Fri May 14 13:29:48 2021] deleted 12 isolated nodes
+[Fri May 14 13:29:48 2021] building unitigs
+[Fri May 14 13:29:48 2021] TOT 234797824, CNT 20258, AVG 11591, MAX 199680, N50 17920, L50 3816, N90 5120, L90 13311, Min 1280
+[Fri May 14 13:29:48 2021] output "assembly_HV6A.frg.nodes". Done.
+[Fri May 14 13:29:48 2021] generating links
+[Fri May 14 13:29:48 2021] generated 5444 links
+[Fri May 14 13:29:48 2021] output "assembly_HV6A.frg.dot.gz". Done.
+[Fri May 14 13:29:48 2021] rescue 0 weak links
+[Fri May 14 13:29:48 2021] deleted 42 binary links
+[Fri May 14 13:29:48 2021] cut 109 transitive links
+[Fri May 14 13:29:48 2021] remove 440 boomerangs
+[Fri May 14 13:29:48 2021] remove 552 weak branches
+[Fri May 14 13:29:48 2021] cut 18 tips
+[Fri May 14 13:29:48 2021] pop 0 bubbles
+[Fri May 14 13:29:48 2021] detached 0 repeat-associated paths
+[Fri May 14 13:29:48 2021] cut 0 tips
+[Fri May 14 13:29:48 2021] output "assembly_HV6A.ctg.dot.gz". Done.
+[Fri May 14 13:29:48 2021] building contigs
+[Fri May 14 13:29:48 2021] searched 16416 contigs
+[Fri May 14 13:29:48 2021] Estimated: TOT 287734784, CNT 12221, AVG 23545, MAX 296448, N50 37120, L50 2357, N90 10240, L90 8149, Min 4864
+[Fri May 14 13:30:03 2021] output 12221 contigs
+[Fri May 14 13:30:03 2021] Program Done
+** PROC_STAT(TOTAL) **: real 1412.153 sec, user 20624.940 sec, sys 447.030 sec, maxrss 12683272.0 kB, maxvsize 18262512.0 kB
+---
+wtpoa-cns -i assembly_HV6A.ctg.lay.gz -t 16 -fo assembly_HV6A_raw.raw.fa
+--
+-- total memory      198045428.0 kB
+-- available         187302544.0 kB
+-- 32 cores
+-- Starting program: wtpoa-cns -i assembly_HV6A.ctg.lay.gz -t 16 -fo assembly_HV6A_raw.raw.fa
+-- pid                     12074
+-- date         Fri May 14 13:37:37 2021
+--
+12221 contigs 159004 edges 261868950 bases
+** PROC_STAT(TOTAL) **: real 2729.691 sec, user 43590.360 sec, sys 251.060 sec, maxrss 2350116.0 kB, maxvsize 3849528.0 kB

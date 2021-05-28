@@ -2,8 +2,10 @@
 BI 2021 Spring Project
 
 Students & Main tasks:
+
 1) Ignat Sonets -- hybrid genome assembly
 2) Adelia Popova -- HHV6A virus integration site search
+
 Sub-tasks:
 
 1)Analyze the available algorithms for performing de novo hybrid assembly of the human genome.
@@ -11,7 +13,8 @@ Sub-tasks:
 3)Predict assembly errors using the GRCh38 reference genome.
 4)Search for the site of the HV6A insertion.
 
-Background: 
+Background:
+
   It has been shown that human betaherpesvirus 6 (HHV-6) can integrate into the telomeres of the host cell chromosomes.                
 The chromosomally integrated form of the virus (chiHVH-6) occurs in the human population up to 1.5% of cases and can be inherited from one or both parents to children. The sites of integration are not clearly defined, although it is assumed that viral integration occurs predominantly in certain chromosomes.            
   There is evidence of the possibility of reactivation of HHV-6 integrated into the human chromosome during life in infected individuals. Confirmation of the reactivation of chiHVH-6 with the development of an active infectious process will be an important factor in deciding whether to prescribe etiotropic therapy.

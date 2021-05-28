@@ -30,14 +30,14 @@ Cluster of our lab: 3 Tb availbale space, 32 CPU, 160Gb of RAM, Ubuntu 18.04 LTS
   However, these tools are currently in early stages development, and this might be the reason for our contoversial results.
   
    ### 3.2. Nanopore-only genome assembly -- Flye (https://github.com/fenderglass/Flye) and wtdbg2 (https://github.com/ruanjue/wtdbg2)
-   ### 3.3. Illumina-only genome assembly -- Minia (https://github.com/GATB/minia)
+   ### 3.3. Illumina-only genome assembly -- Minia (https://github.com/GATB/minia) and ABYSS (https://github.com/bcgsc/abyss)
    Our main limitation was limited possibilities of available hardware. 
    Assembly of Nanopore/MGI-only reads was performed as an alternative assembly that migth be useful on next steps of our project.
    ### 3.4. Custom pipeline(see Fig.1 in repository).
    Other ready-made pipelines were not successful, so we decided to make custom pipeline. Its main steps are:
    - first assemble Nanopore reads using Flye;
-   - polish them with Minimap2 and Racon;
-   - align MGI reads to the draft assembly with BWA and polish gaps with Pilon;
+   - polish them with Minimap2 and Racon (https://github.com/lbcb-sci/racon);
+   - align MGI reads to the draft assembly with BWA (https://github.com/lh3/bwa) and polish gaps with Pilon (https://github.com/broadinstitute/pilon);
    - reassemble contigs to scaffold using Flye.
    On 30/05/21, this pipeline is WIP and may change.
    ### 3.5. Assessing quality of assemblies: QUAST (https://github.com/ablab/quast)

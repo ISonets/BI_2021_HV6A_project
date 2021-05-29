@@ -1,0 +1,24 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                    hs_HV6A_8
+# contigs (>= 0 bp)         2626186  
+# contigs (>= 1000 bp)      1127     
+# contigs (>= 5000 bp)      2        
+# contigs (>= 10000 bp)     0        
+# contigs (>= 25000 bp)     0        
+# contigs (>= 50000 bp)     0        
+Total length (>= 0 bp)      166082119
+Total length (>= 1000 bp)   1744629  
+Total length (>= 5000 bp)   10691    
+Total length (>= 10000 bp)  0        
+Total length (>= 25000 bp)  0        
+Total length (>= 50000 bp)  0        
+# contigs                   4748     
+Largest contig              5549     
+Total length                4200275  
+GC (%)                      44.15    
+N50                         886      
+N75                         651      
+L50                         1506     
+L75                         2900     
+# N's per 100 kbp           7.81     

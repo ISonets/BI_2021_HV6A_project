@@ -8,10 +8,10 @@ BI 2021 Spring Project
 
 # Sub-tasks:
 
-1)Analyze the available algorithms for performing de novo hybrid assembly of the human genome.
-2)Perform hybrid de novo assembly with at least two alternative algorithms. Compare the build quality in terms of NG50, NGA50.
-3)Predict assembly errors using the GRCh38 reference genome.
-4)Search for the site of the HV6A insertion.
+1. Analyze the available algorithms for performing de novo hybrid assembly of the human genome.
+2. Perform hybrid de novo assembly with at least two alternative algorithms. Compare the build quality in terms of NG50, NGA50.
+3. Predict assembly errors using the GRCh38 reference genome.
+4. Search for the site of the HV6A insertion.
 
 # Background:
 

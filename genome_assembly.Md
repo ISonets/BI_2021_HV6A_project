@@ -79,7 +79,7 @@ wtdbg2 -i reads_all.fastq  -t 16 -x preset3 -g 3g -o assembly_HV6A
 ```
 ## 3.2. Flye
 Tool was installed through conda.
-I specified threads number (```-t 16```) and genome size (```-g 3g```) (3Gb). Log file is available at logs/ folder. Total size of the assembly is 768Mb. Better, but far from perfect.
+I specified threads number (```-t 16```) and genome size (```-g 3g```) (3Gb). Log file is available at logs/ folder. Total size of the assembly is 180Mb. Even worse, and far from perfect.
 ```
 flye --nano-raw reads_all.fastq --out-dir flye_res/ -g 3g -t 16
 ```
@@ -94,7 +94,7 @@ haslr.py -t 16 -o ../haslr_res_v2 -g 3g -l ../reads_all.fastq -x nanopore \
  v300039647_L03_103_1.fq.gz v300039647_L03_103_2.fq.gz v300039647_L03_104_1.fq.gz v300039647_L03_104_2.fq.gz
  --cov-lr 4 --aln-block 250 --aln-sim 0.75 --minia-kmer 25 --edge-sup 2
 ```
-QUAST was used to assess genome quality. QUAST results are in QUAST_res/ folder. Size of the assembly is 752Mb. Far from perfect.
+QUAST was used to assess genome quality. QUAST results are in QUAST_res/ folder. Size of the assembly is 752Mb. Far from perfect. But may be a good start for improved assemblies.
  
 # 5. *De novo* genome assembly with WENGAN
 Tool was installed via building from source. Not all components were built. ABYSS and DiscovarDeNovo builds failed, I tried to fix it, but also failed. Fortunately, Minia3 built itself correctly.
@@ -130,7 +130,7 @@ gunzip *.fq.gz
 cat *_1.fq > reads_R1_MGI.fastq
 cat *_2.fq > reads_R2_MGI.fastq
 ```
-Usage is simple. I specified mode for paired-end libraries (```abyss-pe```), specified number of threads (16) (```np=16```) and k-mer size (```k=96```).
+Usage is simple. I specified mode for paired-end libraries (```abyss-pe```), specified number of threads (16) (```np=16```) and k-mer size (```k=96```). Total size is about 210 Mb. Weird...
 Log file is available at logs/ folder. 
 
 ```
@@ -141,14 +141,20 @@ QUAST was used to estimate assembly quality. QUAST results are in QUAST_res/ fol
 # 6.2. Minia
 
 Tool was installed with conda. No problem. Assuming fo FastQC report (which showed good quality), I decided to launch the tool with standard parameters.
-Log file is available at logs/ folder. QUAST results are in QUAST_res/ folder.
+Log file is available at logs/ folder. QUAST results are in QUAST_res/ folder. Total size of the assembly is about 3.1 Gb.
 ```
 minia -in reads_1_MGI.fq,reads_2_MGI.fq -out minia_asm.fa
 ```
 Minia showed the best resulting assembly across all draft assemblies. But it is only partial success. After some consulting , I decided to adopt custom pipeline.
 
 # 7. Custom pipeline
-Fig.1 illustates custom pipeline prosed for task completion.![Fig.1. Pipeline proposal](/custom_pipeline_proposal.png)
+
+Fig.1 illustates custom pipeline prosed for task completion.
+
+![Fig.1. Pipeline proposal](/custom_pipeline_proposal.png)
+
+Fig.1. Pipeline proposal
+
    - first assemble Nanopore reads using Flye (done previosly);
    - polish them with Minimap2 and Racon (we are here at 21/05/21);
    - align MGI reads to the draft assembly with BWA and polish gaps with Pilon;
@@ -156,8 +162,17 @@ Fig.1 illustates custom pipeline prosed for task completion.![Fig.1. Pipeline pr
 Unfortunately, Racon polisher refused to work as intended, and I have no idea why. It said smth about malformed header and errors in generated .sam files,(log file was deleted by my mistake) although they looked completely normal. It seems that we should do it again, with clean env and maybe realign raw reads and assembly again, and maybe try another aligner (not Minimap2).
 
 # 8. Taxonomic analysis.
+
 Maybe my reads are totally contaminated, and I can't produce good alignments and therefore good contigs and scaffolds? I decided to use Kaiju to verify taxonomic content.
-Tool was installed via conda. As a reference database RefSeq Genomes database were used and downloaded. To put in simple, there are some contamination, most of them are viral and bacterial, bus some fungi also occur in raw data. Unfortunately, I ran out of time and don't check all reads, but I assume that because all data are taken from 1 person and processed simultaneously, results would be relevant. See Fig.2 (Nanopore data taxonomic profile), Fig.3 (MGI data taxonomic profile) here and in Kaiju_results/ folder (as also Table 1 (taxonomic profile summary for Nanopore reads) and Table 2 (taxonomic profile summary for MGI reads)) for more details. In future I plan to filter out bacterial reads and preserve viral reads,since we seacrhing for viral genome.
+Tool was installed via conda. As a reference database RefSeq Genomes database were used and downloaded. To put in simple, there are some contamination, most of them are viral and bacterial, bus some fungi also occur in raw data. Unfortunately, I ran out of time and don't check all reads, but I assume that because all data are taken from 1 person and processed simultaneously, results would be relevant. See Fig.2 (Nanopore data taxonomic profile), Fig.3 (MGI data taxonomic profile) here and in Kaiju_results/ folder (as also Table 1 (taxonomic profile summary for Nanopore reads) and Table 2 (taxonomic profile summary for MGI reads)) for more details.
+Fig.2. Kaiju result for nanopore reads]
+![Fig.2. Kaiju result for nanopore reads](/Kaiju_results/Fig_2_nanopore_taxa_result.png)
+
+
+Fig.3. Kaiju result for MGI reads
+![Fig.3. Kaiju result for MGI reads](/Kaiju_results/Fig_3_MGI_taxa_result.png)
+
+In future I plan to filter out bacterial reads and preserve viral reads,since we seacrhing for viral genome.
 
 # 9. Future plans and things to discuss:
 

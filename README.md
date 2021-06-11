@@ -1,19 +1,13 @@
 # BI_2021_HV6A_project
 BI 2021 Spring Project
 
-# Students & Main tasks:
+Students:
+1) Ignat Sonets;
+2) Adelia Popova
 
-1) Ignat Sonets -- hybrid de novo genome assembly
-2) Adelia Popova -- HHV6A virus integration site search (see separate repository)
+This repo contains only part done by Ignat Sonets, Adelia has her own repository to store data and results.
 
-# Sub-tasks:
-
-1. Analyze the available algorithms for performing de novo hybrid assembly of the human genome.
-2. Perform hybrid de novo assembly with at least two alternative algorithms. Compare the build quality in terms of NG50, NGA50.
-3. Predict assembly errors using the GRCh38 reference genome.
-4. Search for the site of the HV6A insertion.
-
-# Background:
+# PROJECT BACKGROUND:
 
 It has been shown that human betaherpesvirus 6 (HHV-6) can integrate into the telomeres of the host cell chromosomes.
  
@@ -26,3 +20,22 @@ Thus, the study is devoted to the localization of the site of HHV-6A integration
 The aim of this work is a hybrid assembly of the human genome, presumably containing integrated HHV-6A. The results may be relevant for further clarifying studies (Sanger sequencing, FISH hybridization)
 
 See Workflow for materials and methods used in this project.
+
+# TASKS:
+
+1. Analyze the available algorithms for performing de novo hybrid assembly of the human genome.
+2. Perform hybrid de novo assembly with at least two alternative algorithms. Compare the build quality in terms of NG50, NGA50.
+3. Predict assembly errors using the GRCh38 reference genome.
+4. Search for the site of the HV6A insertion.
+
+# Students & their tasks:
+
+1) Ignat Sonets -- hybrid de novo genome assembly
+2) Adelia Popova -- HHV6A virus integration site search (see separate repository)
+
+# REPOSITORY STRUCTURE:
+1) Workflow_genome_assembly.Md -- main document, where you can find list of used tools, hardware desciption, wokflow, struggels during the project and future plans;
+2) FastQC_reports -- reports for all MGI reads data after using AfterQC tool;
+3) Kaiju results -- results for estimation taxonomic composition. To date only 2 of the files were checked,but we suggest that other files being taken from 1 source also had same taxonomic profile;
+4) QUAST_res -- statistics for almost all assemblies made for this project;
+5) assembly_logs -- log files for almost all assemblies, this files could be useful in future work.

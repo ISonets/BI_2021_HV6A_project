@@ -1,11 +1,11 @@
-# BI_2021_HV6A_project
+# BI 2021 HV6A_project
 BI 2021 Spring Project
 
 Students:
 1) Ignat Sonets;
 2) Adelia Popova
 
-This repo contains only part done by Ignat Sonets, Adelia has her own repository to store data and results.
+This repo contains only part done by Ignat Sonets, Adelia has her own repository to store data and results. Project is now in WIP and work will be continued after 15/06/2021.
 
 # PROJECT BACKGROUND:
 

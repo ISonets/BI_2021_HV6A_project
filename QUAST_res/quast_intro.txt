@@ -1,1 +1,0 @@
-There are QUAST results for MGI-only and Nanopore-only assemblies.

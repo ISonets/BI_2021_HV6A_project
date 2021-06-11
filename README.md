@@ -19,7 +19,7 @@ Thus, the study is devoted to the localization of the site of HHV-6A integration
 
 The aim of this work is a hybrid assembly of the human genome, presumably containing integrated HHV-6A. The results may be relevant for further clarifying studies (Sanger sequencing, FISH hybridization)
 
-See Workflow for materials and methods used in this project.
+See Workflow_genome_assembly.Md for workflow of this project.
 
 # TASKS:
 

@@ -1,0 +1,1 @@
+There are Kaiju results for Nanopore and MGI data: short summary tables and figures for visualization. Although taxonomic profile check was done only on part of all data, we suggest that other files being taken from 1 source also had same taxonomic profile;
